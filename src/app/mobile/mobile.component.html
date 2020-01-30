@@ -1,12 +1,14 @@
+<form [formGroup]="mobFormGroup">
+
 <div class="container">
 <div class="jumbotron">
 <div><h3> Mobile Recharge or Bill Payment </h3>
-<input type="radio"  name="Prepaid" />Prepaid
-<input type="radio" name="Postpaid" />Postpaid<br /><br />
-<input type="text" placeholder="Mobile Number">
-<input type="text" placeholder="Operator">
-<input type="text" placeholder="Amount">
+<input type="radio" formControlName="Prepaid" class="form-control" name="Prepaid" />Prepaid
+<input type="radio" formControlName="Postpaid" class="form-control"name="Postpaid" />Postpaid<br /><br />
+<input type="text" formControlName="MobileNumber" class="form-control"placeholder="Mobile Number">
+<input type="text" formControlName="Operator" class="form-control"placeholder="Operator">
+<input type="text" formControlName="Amount" class="form-control"placeholder="Amount">
 <button type="submit" (click)="submit()" class="btn btn-primary">Proceed to Recharge</button>
 
 
-</div></div></div>
+</div></div></div></form>

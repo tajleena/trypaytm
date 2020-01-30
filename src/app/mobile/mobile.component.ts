@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import{FormBuilder, FormGroup, Validators} from '@angular/forms';
+
 
 @Component({
   selector: 'app-mobile',
@@ -7,13 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobileComponent implements OnInit {
 
-  constructor() { }
+  mobFormGroup:FormGroup;
+
+  constructor(private formBuilder:FormBuilder)
+  {
+
+  }
 
   ngOnInit() {
+    this.mobFormGroup=this.formBuilder.group({
+      Prepaid:['',Validators.required],
+      Postpaid:['',Validators.required],
+      MobileNumber:['',Validators.required],
+      Operator:['',Validators.required],
+      cAmount:['',Validators.requiredTrue]
+    });
   }
   submit()
   {
-    console.log(this.signInFormGroup.value);
+    console.log(this.mobFormGroup.value);
   }
 
 }
