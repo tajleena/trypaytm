@@ -18,11 +18,10 @@ export class MobileComponent implements OnInit {
 
   ngOnInit() {
     this.mobFormGroup=this.formBuilder.group({
-      Prepaid:['',Validators.required],
-      Postpaid:['',Validators.required],
+      paid:['',Validators.required],
       MobileNumber:['',Validators.required],
       Operator:['',Validators.required],
-      cAmount:['',Validators.requiredTrue]
+      Amount:['',Validators.requiredTrue]
     });
   }
   submit()

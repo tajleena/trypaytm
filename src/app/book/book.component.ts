@@ -9,7 +9,7 @@ export class BookComponent implements OnInit {
   @Input() items:any;
   @Input() title:string;
 
-  constructor() { }
+  
 
   ngOnInit() {
   }
