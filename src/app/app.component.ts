@@ -7,7 +7,7 @@ import { Component,OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit  {
   name = 'Paytm';
-  Book=[{name:"Event"},{name:"hotel"},{name:"flight"},{name:"train"},{name:"ticket"},]
+  Book=[{name:"Movies", icons:"fa fa-film"},{name:"hotel",icons:"fa fa-hotel"},{name:"flight",icons:"fa fa-plane"},{name:"train",icons:"fa fa-train"},{name:"ticket",icons:"fa fa-ticket"},]
 
   ngOnInt(){}
 }
